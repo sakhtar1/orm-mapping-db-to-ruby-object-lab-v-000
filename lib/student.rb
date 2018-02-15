@@ -87,14 +87,14 @@ class Student
 
   end
 
-  def self.all_students_in_grade_X(row)
+  def self.all_students_in_grade_X(x)
     sql = <<-SQL
       SELECT students.id, students.name
       FROM students;
     SQL
 
-    DB[:conn].execute(sql,grade).map do |row|
-      self.new_from_db(row)
+    DB[:conn].execute(sql,grade).map do |x|
+      self.new_from_db(x)
     end
   end
 
