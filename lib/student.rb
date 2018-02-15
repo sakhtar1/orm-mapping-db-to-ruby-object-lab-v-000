@@ -87,7 +87,7 @@ class Student
 
   end
 
-  def self.all_students_in_grade_X(grade)
+  def self.all_students_in_grade_X(row)
     sql = <<-SQL
       SELECT students.id, students.name
       FROM students;
