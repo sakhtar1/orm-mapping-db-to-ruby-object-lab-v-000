@@ -89,7 +89,7 @@ class Student
 
   def self.all_students_in_grade_X(x)
 
-    DB[:conn].execute(grade).map do |row|
+    DB[:conn].execute(@grade).map do |row|
       self.new_from_db(row).size
     end
   end
