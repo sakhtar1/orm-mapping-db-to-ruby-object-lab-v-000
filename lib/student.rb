@@ -54,7 +54,7 @@ class Student
     sql = <<-SQL
       SELECT name
       FROM students
-      WHERE grade > 12;
+      WHERE grade < 12;
     SQL
 
     DB[:conn].execute(sql).map do |row|
