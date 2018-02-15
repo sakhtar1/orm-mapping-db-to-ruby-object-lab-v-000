@@ -39,7 +39,7 @@ class Student
   end
 
   def self.count_all_students_in_grade_9
-    DB[:conn].execute(,name).map do |row|
+    DB[:conn].execute(name).map do |row|
       self.new_from_db(row)
     end
   end
