@@ -93,8 +93,8 @@ class Student
       FROM students;
     SQL
 
-    DB[:conn].execute(sql,grade).map do |x|
-      self.new_from_db(x)
+    DB[:conn].execute(sql,grade).map do |grade|
+      self.new_from_db(grade)
     end
   end
 
